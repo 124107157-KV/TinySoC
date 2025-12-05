@@ -1,0 +1,125 @@
+VERSION 5.7 ;
+  NOWIREEXTENSIONATPIN ON ;
+  DIVIDERCHAR "/" ;
+  BUSBITCHARS "[]" ;
+MACRO tiny_soc
+  CLASS BLOCK ;
+  FOREIGN tiny_soc ;
+  ORIGIN 0.000 0.000 ;
+  SIZE 94.480 BY 105.200 ;
+  PIN VGND
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+      LAYER met4 ;
+        RECT 24.340 10.640 25.940 92.720 ;
+    END
+  END VGND
+  PIN VPWR
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER met4 ;
+        RECT 21.040 10.640 22.640 92.720 ;
+    END
+  END VPWR
+  PIN clk
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 0.852000 ;
+    PORT
+      LAYER met3 ;
+        RECT 0.000 85.040 4.000 85.640 ;
+    END
+  END clk
+  PIN gpio[0]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    ANTENNADIFFAREA 0.445500 ;
+    PORT
+      LAYER met3 ;
+        RECT 90.480 44.240 94.480 44.840 ;
+    END
+  END gpio[0]
+  PIN gpio[1]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    ANTENNADIFFAREA 0.445500 ;
+    PORT
+      LAYER met2 ;
+        RECT 51.610 0.000 51.890 4.000 ;
+    END
+  END gpio[1]
+  PIN gpio[2]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    ANTENNADIFFAREA 0.445500 ;
+    PORT
+      LAYER met3 ;
+        RECT 0.000 54.440 4.000 55.040 ;
+    END
+  END gpio[2]
+  PIN gpio[3]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    ANTENNADIFFAREA 0.445500 ;
+    PORT
+      LAYER met2 ;
+        RECT 35.510 101.200 35.790 105.200 ;
+    END
+  END gpio[3]
+  PIN rst_n
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    ANTENNAGATEAREA 0.196500 ;
+    PORT
+      LAYER met3 ;
+        RECT 90.480 17.040 94.480 17.640 ;
+    END
+  END rst_n
+  PIN uart_rx
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER met2 ;
+        RECT 0.090 0.000 0.370 4.000 ;
+    END
+  END uart_rx
+  PIN uart_tx
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    ANTENNADIFFAREA 0.445500 ;
+    PORT
+      LAYER met3 ;
+        RECT 90.480 64.640 94.480 65.240 ;
+    END
+  END uart_tx
+  OBS
+      LAYER nwell ;
+        RECT 5.330 10.795 88.970 92.565 ;
+      LAYER li1 ;
+        RECT 5.520 10.795 88.780 92.565 ;
+      LAYER met1 ;
+        RECT 5.520 10.640 89.080 92.720 ;
+      LAYER met2 ;
+        RECT 6.530 100.920 35.230 101.730 ;
+        RECT 36.070 100.920 87.310 101.730 ;
+        RECT 6.530 4.280 87.310 100.920 ;
+        RECT 6.530 4.000 51.330 4.280 ;
+        RECT 52.170 4.000 87.310 4.280 ;
+      LAYER met3 ;
+        RECT 4.000 86.040 90.480 92.645 ;
+        RECT 4.400 84.640 90.480 86.040 ;
+        RECT 4.000 65.640 90.480 84.640 ;
+        RECT 4.000 64.240 90.080 65.640 ;
+        RECT 4.000 55.440 90.480 64.240 ;
+        RECT 4.400 54.040 90.480 55.440 ;
+        RECT 4.000 45.240 90.480 54.040 ;
+        RECT 4.000 43.840 90.080 45.240 ;
+        RECT 4.000 18.040 90.480 43.840 ;
+        RECT 4.000 16.640 90.080 18.040 ;
+        RECT 4.000 10.715 90.480 16.640 ;
+  END
+END tiny_soc
+END LIBRARY
+
