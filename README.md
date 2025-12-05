@@ -240,6 +240,27 @@ This exercises:
 
 ---
 
+### Magic DRC (Design Rule Check)
+
+The final post-route GDS was checked using Magic with the Sky130A
+technology.
+
+Key results (from `docs/magic_drc/magic-drc.log`):
+
+- **DRC engine:** Magic 8.3, Sky130A tech
+- **DRC style:** drc(full)
+- **Total DRC errors:** 0
+
+Magic reports:
+
+> `No errors found.`
+> `COUNT: 0`
+
+A detailed violation report is available in
+`docs/magic_drc/drc_violations.magic.rpt`.
+
+---
+
 ## Possible Extensions / Future Work
 
 * Add GPIO / SPI peripheral
