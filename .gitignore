@@ -1,0 +1,10 @@
+# LibreLane / ASIC outputs
+runs/
+tmp/
+*.vcd
+*.log
+
+# Editor / OS files
+*.swp
+*.swo
+.DS_Store

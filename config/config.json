@@ -1,0 +1,12 @@
+{
+  "DESIGN_NAME": "tiny_soc",
+  "VERILOG_FILES": "dir::rtl/*.v",
+  "CLOCK_PORT": "clk",
+  "CLOCK_PERIOD": 20.0,
+
+  "pdk::sky130A": {
+    "FP_CORE_UTIL": 45,
+    "PL_TARGET_DENSITY_PCT": "expr::($FP_CORE_UTIL + 5.0)"
+  }
+}
+
